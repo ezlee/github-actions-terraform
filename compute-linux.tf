@@ -1,3 +1,4 @@
+
 # Get the latest Ubuntu 22.04 LTS AMI
 data "aws_ami" "ubuntu" {
   most_recent = true

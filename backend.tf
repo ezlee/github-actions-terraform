@@ -15,5 +15,13 @@ terraform {
       version = ">= 3.0.0"
       source  = "hashicorp/tls"
     }
+    random = {
+      version = ">= 3.0.0"
+      source  = "hashicorp/random"
+    }
   }
+}
+
+provider "aws" {
+  region = "us-east-1"
 }
