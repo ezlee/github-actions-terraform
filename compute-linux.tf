@@ -1,4 +1,3 @@
-provider "random" {}
 
 # Get the latest Ubuntu 22.04 LTS AMI
 data "aws_ami" "ubuntu" {
