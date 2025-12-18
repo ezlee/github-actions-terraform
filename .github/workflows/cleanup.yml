@@ -27,7 +27,9 @@ jobs:
 
     - name: 'Generate variables.auto.tfvars'
       run: |
-        echo "ip_whitelist = \"${{ secrets.IP_WHITELIST || '0.0.0.0/0' }}\"" >> variables.auto.tfvars
+        IP_WHITELIST_VALUE="${{ secrets.IP_WHITELIST || '203.0.113.1/32' }}"
+        echo "ip_whitelist = \"$IP_WHITELIST_VALUE\"" > variables.auto.tfvars
+        cat variables.auto.tfvars
 
     - name: 'Set up Terraform'
       uses: hashicorp/setup-terraform@v1
